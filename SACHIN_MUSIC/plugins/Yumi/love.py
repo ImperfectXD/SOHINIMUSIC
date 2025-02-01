@@ -26,7 +26,7 @@ def get_random_message(love_percentage):
 
 EVAA = [
     [
-        InlineKeyboardButton(text="ᴀᴅᴅ ᴍᴇ ʙᴀʙʏ", url=f"https://t.me/SUCHI_MUSIC_BOT?startgroup=true"),
+        InlineKeyboardButton(text="ᴀᴅᴅ ᴍᴇ ʙᴀʙʏ", url=f"https://t.me/DollxMusic_bot?startgroup=true"),
     ],
 ]
 
