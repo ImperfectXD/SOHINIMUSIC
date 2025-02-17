@@ -5,6 +5,9 @@ import heroku3
 from pyrogram import filters
 
 import config
+from SACHIN_MUSIC.core.mongo import mongodb
+
+from .logging import LOGGER
 
 SUDOERS = filters.user()
 
@@ -70,15 +73,3 @@ def heroku():
                 LOGGER(__name__).warning(
                     f"𝗬𝗢𝗨 𝗛𝗔𝗩𝗘 𝗡𝗢𝗧 𝗙𝗜𝗟𝗟𝗘𝗗 𝗛𝗘𝗥𝗢𝗞𝗨 𝗔𝗣𝗜 𝗞𝗘𝗬 𝗔𝗡𝗗 𝗛𝗘𝗥𝗢𝗞𝗨 𝗔𝗣𝗣 𝗡𝗔𝗠𝗘 𝗖𝗢𝗥𝗥𝗘𝗖𝗧"
 )
-                async def sudo():
-    global SUDOERS
-    SUDOERS.add(config.OWNER_ID)
-    sudoersdb = mongodb.sudoers
-    sudoers = await sudoersdb.find_one({"sudo": "sudo"})
-    sudoers = [] if not sudoers else sudoers["sudoers"]
-    if config.OWNER_ID not in sudoers:
-        sudoers.append(config.OWNER_ID)
-        await sudoersdb.update_one(
-            {"sudo": "sudo"},
-            {"$set": {"sudoers": sudoers}},
-            upsert=True,
