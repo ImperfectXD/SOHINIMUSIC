@@ -107,6 +107,7 @@ async def play_commnd(
                 ext = video_telegram.file_name.split(".")[-1]
                 if ext.lower() not in formats:
                     return await mystic.edit_text(
+                        
                         _["play_7"].format(f"{' | '.join(formats)}")
                     )
             except:
@@ -202,6 +203,8 @@ async def play_commnd(
                 try:
                     details, plist_id = await Spotify.album(url)
                 except:
+                  
+                    
                     return await mystic.edit_text(_["play_3"])
                 streamtype = "playlist"
                 plist_type = "spalbum"
@@ -261,7 +264,7 @@ async def play_commnd(
                     )
                 )
             try:
-                await stream(
+                await stream0
                     _,
                     mystic,
                     user_id,
@@ -515,6 +518,7 @@ async def play_playlists_command(client, CallbackQuery, _):
         mode,
         cplay,
         fplay,
+        steamplay
     ) = callback_request.split("|")
     if CallbackQuery.from_user.id != int(user_id):
         try:
@@ -622,7 +626,7 @@ async def slider_queries(client, CallbackQuery, _):
         title, duration_min, thumbnail, vidid = await YouTube.slider(query, query_type)
         buttons = slider_markup(_, vidid, user_id, query, query_type, cplay, fplay)
         med = InputMediaPhoto(
-            media=thumbnail,
+            media=thumbnail,wall
             caption=_["play_10"].format(
                 title.title(),
                 duration_min,
