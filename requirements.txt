@@ -1,3 +1,4 @@
+
 aiofiles
 bard
 SpeechRecognition
@@ -10,6 +11,7 @@ deepai
 python-whois
 dnspython
 ffmpeg-python
+gitpython
 hachoir
 Faker
 pydub
@@ -26,7 +28,7 @@ qrcode
 pytz
 future==0.18.3
 search_engine_parser
-py-tgcalls==0.7.7
+py-tgcalls==0.9.7
 pykeyboard
 pyshorteners
 pyrogram==2.0.106
