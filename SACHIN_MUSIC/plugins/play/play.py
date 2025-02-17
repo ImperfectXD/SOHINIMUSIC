@@ -83,7 +83,6 @@ async def play_commnd(
                 "dur": dur,
             }
 
-            )
             try:
                 await stream(
                     _,
@@ -108,7 +107,6 @@ async def play_commnd(
                 ext = video_telegram.file_name.split(".")[-1]
                 if ext.lower() not in formats:
                     return await mystic.edit_text(
-                        
                         _["play_7"].format(f"{' | '.join(formats)}")
                     )
             except:
@@ -167,15 +165,6 @@ async def play_commnd(
                 img = config.PLAYLIST_IMG_URL
                 cap = _["play_9"]
             else:
-                 if await YouTube.exists(url):
-            if "playlist" in url:
-                try:
-                    details = await YouTube.playlist(
-                        url,
-                        config.PLAYLIST_FETCH_LIMIT,
-                        message.from_user.id,
-                    )
-                except:
                 try:
                     details, track_id = await YouTube.track(url)
                 except:
@@ -213,8 +202,6 @@ async def play_commnd(
                 try:
                     details, plist_id = await Spotify.album(url)
                 except:
-                  
-                    
                     return await mystic.edit_text(_["play_3"])
                 streamtype = "playlist"
                 plist_type = "spalbum"
@@ -274,7 +261,7 @@ async def play_commnd(
                     )
                 )
             try:
-                await stream0
+                await stream(
                     _,
                     mystic,
                     user_id,
@@ -528,7 +515,6 @@ async def play_playlists_command(client, CallbackQuery, _):
         mode,
         cplay,
         fplay,
-        steamplay
     ) = callback_request.split("|")
     if CallbackQuery.from_user.id != int(user_id):
         try:
@@ -636,7 +622,7 @@ async def slider_queries(client, CallbackQuery, _):
         title, duration_min, thumbnail, vidid = await YouTube.slider(query, query_type)
         buttons = slider_markup(_, vidid, user_id, query, query_type, cplay, fplay)
         med = InputMediaPhoto(
-            media=thumbnail,wall
+            media=thumbnail,
             caption=_["play_10"].format(
                 title.title(),
                 duration_min,
