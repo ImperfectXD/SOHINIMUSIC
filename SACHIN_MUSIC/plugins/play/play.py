@@ -83,6 +83,7 @@ async def play_commnd(
                 "dur": dur,
             }
 
+            )
             try:
                 await stream(
                     _,
@@ -166,6 +167,15 @@ async def play_commnd(
                 img = config.PLAYLIST_IMG_URL
                 cap = _["play_9"]
             else:
+                 if await YouTube.exists(url):
+            if "playlist" in url:
+                try:
+                    details = await YouTube.playlist(
+                        url,
+                        config.PLAYLIST_FETCH_LIMIT,
+                        message.from_user.id,
+                    )
+                except:
                 try:
                     details, track_id = await YouTube.track(url)
                 except:
