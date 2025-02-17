@@ -4,7 +4,7 @@ import random
 import requests
 from SACHIN_MUSIC import app 
 
-SUPPORT_CHAT = "THE_INCRICIBLE"
+SUPPORT_CHAT = "shubhos_timeline"
 
 @app.on_message(filters.command("wish"))
 async def wish(_, m):
