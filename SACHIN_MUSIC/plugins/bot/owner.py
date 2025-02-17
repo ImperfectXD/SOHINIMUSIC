@@ -10,16 +10,16 @@ start_txt = """
 **
 ┌┬─────────────────⦿
 │├─────────────────╮
-│├ ᴛɢ ɴᴀᴍᴇ - ʟᴇɢᴇɴᴅ ᴍɪᴄᴋᴇʏ
-│├ ʀᴇᴀʟ ɴᴀᴍᴇ - ᴛᴏsᴜ ᴍᴇᴍᴏɴ
+│├ ᴛɢ ɴᴀᴍᴇ - 𓆩 𝐒 𝐇 𝐔 𝐁 𝐇 𝐎 𓆪
+│├ ʀᴇᴀʟ ɴᴀᴍᴇ - sᴇᴄʀᴇᴛ
 │├─────────────────╯
 ├┼─────────────────⦿
-├┤~ @THE_INCRICIBLE
-├┤~ @LEGEND_MICKEY
-├┤~ @ABOUT_GODFATHER
+├┤~ @Hey_cuties
+├┤~ @about_sohini
+├┤~ @shubhos_timeline
 ├┼─────────────────⦿
 │├─────────────────╮
-│├OWNER│ @LEGEND_MICKEY
+│├OWNER│ @shubhos_timeline
 │├─────────────────╯
 └┴─────────────────⦿
 **
@@ -32,17 +32,17 @@ start_txt = """
 async def start(_, msg):
     buttons = [
         [ 
-          InlineKeyboardButton(" 𝗟𝗘𝗚𝗘𝗡𝗗 𝗠𝗜𝗖𝗞𝗘𝗬", url=f"https://t.me/LEGEND_MICKEY")
+          InlineKeyboardButton("𓆩 𝐒 𝐇 𝐔 𝐁 𝐇 𝐎 𓆪", url=f"https://t.me/shubhos_timeline")
         ],
         [
-          InlineKeyboardButton("ʜᴇʟᴘ", url="https://t.me/THE_INCRICIBLE"),
-          InlineKeyboardButton("ʀᴇᴘᴏ", url="https://t.me/THE_INCRICIBLE"),
+          InlineKeyboardButton("ʜᴇʟᴘ", url="https://t.me/shubhos_timeline"),
+          InlineKeyboardButton("ʀᴇᴘᴏ", url="https://t.me/shubhos_timeline"),
           ],
                [
-                InlineKeyboardButton("ɪɴᴄʀɪᴄɪʙʟᴇ ɴᴇᴛᴡᴏʀᴋ", url=f"https://t.me/THE_INCRICIBLE"),
+                InlineKeyboardButton("ɪɴᴄʀɪᴄɪʙʟᴇ ɴᴇᴛᴡᴏʀᴋ", url=f"https://t.me/shubhos_timeline"),
 ],
 [
-InlineKeyboardButton("ᴏғғɪᴄɪᴀʟ ʙᴏᴛ", url=f"https://t.me/ZOYUMUSICBOT"),
+InlineKeyboardButton("ᴏғғɪᴄɪᴀʟ ʙᴏᴛ", url=f"https://t.me/shubhos_timeline"),
 
         ]]
     
